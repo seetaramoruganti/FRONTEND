@@ -17,7 +17,7 @@ const PlaceItem = (props) => {
         <div className="place-item__actions">
           <button> View On Map </button>
           <button>Edit</button>
-          <buttton>Delete</buttton>
+          <button>Delete</button>
         </div>
       </Card>
     </li>
