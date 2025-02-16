@@ -1,15 +1,16 @@
 import React from "react";
-import "./PlaceList.css";
+
 import Card from "../../shared/components/UIElements/Card";
 import PlaceItem from "./PlaceItem";
+import "./PlaceList.css";
 
 const PlaceList = (props) => {
   if (props.items.length === 0) {
     return (
       <div className="place-list center">
         <Card>
-          <h2>You have 0 places posted !</h2>
-          <button>Share a Place</button>
+          <h2>No places found. Maybe create one?</h2>
+          <button>Share Place</button>
         </Card>
       </div>
     );
@@ -21,12 +22,12 @@ const PlaceList = (props) => {
         <PlaceItem
           key={place.id}
           id={place.id}
-          coordinates={place.location}
           image={place.imageUrl}
-          creatorId={place.creator}
-          address={place.address}
           title={place.title}
           description={place.description}
+          address={place.address}
+          creatorId={place.creator}
+          coordinates={place.location}
         />
       ))}
     </ul>
